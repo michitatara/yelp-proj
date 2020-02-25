@@ -1,0 +1,7 @@
+.home-page {
+    padding: 20px;
+}
+.card-title {
+    margin: 0 20px;
+}
+export default HomePage;
