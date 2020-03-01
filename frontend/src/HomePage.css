@@ -4,4 +4,7 @@
 .card-title {
     margin: 0 20px;
 }
-export default HomePage;
+
+:export{
+       default: HomePage;
+}

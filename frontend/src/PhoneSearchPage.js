@@ -8,15 +8,18 @@ import Pagination from "react-bootstrap/Pagination";
 import * as yup from "yup";
 import { searchPhone } from "./requests";
 import { days } from "./exports";
+
 const schema = yup.object({
   phone: yup.string().required("Phone is required"),
 });
+
 function PhoneSearchPage() {
   const [results, setResults] = useState([]);
   const [offset, setOffset] = useState(0);
   const [page, setPage] = useState(1);
   const [total, setTotal] = useState(0);
   const [params, setParams] = useState({});
+
   const getEvents = async params => {
     const response = await searchPhone(params);
     setTotal(response.data.phone_search.total);
@@ -102,11 +105,11 @@ function PhoneSearchPage() {
         <Pagination.First onClick={changePage.bind(this, 1)} />
         <Pagination.Prev
           onClick={changePage.bind(this, page - 1)}
-          disabled={page == 0}
+          disabled={page === 0}
         />
         <Pagination.Next
           onClick={changePage.bind(this, page + 1)}
-          disabled={Math.ceil(total / 20) == page}
+          disabled={Math.ceil(total / 20) === page}
         />
         <Pagination.Last
           onClick={changePage.bind(this, Math.max(Math.floor(total / 20)), 0)}

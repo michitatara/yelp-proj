@@ -118,11 +118,11 @@ function HomePage() {
         <Pagination.First onClick={changePage.bind(this, 1)} />
         <Pagination.Prev
           onClick={changePage.bind(this, page - 1)}
-          disabled={page == 0}
+          disabled={page === 0}
         />
         <Pagination.Next
           onClick={changePage.bind(this, page + 1)}
-          disabled={Math.ceil(total / 20) == page}
+          disabled={Math.ceil(total / 20) === page}
         />
         <Pagination.Last
           onClick={changePage.bind(this, Math.max(Math.floor(total / 20)), 0)}

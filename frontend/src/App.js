@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
 import TopBar from "./TopBar";
-import { Router, Route, Link } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
 import { createBrowserHistory as createHistory } from "history";
 import HomePage from "./HomePage";
 import PhoneSearchPage from "./PhoneSearchPage";
 import EventSearchPage from "./EventSearchPage";
 const history = createHistory();
+
 function App() {
   return (
     <div className="App">
