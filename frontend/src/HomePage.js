@@ -75,7 +75,7 @@ function HomePage() {
                   type="text"
                   name="location"
                   placeholder="Location"
-                  value={values.location || ""}
+                  value={(values||{}).location || ""}
                   onChange={handleChange}
                   isInvalid={touched.location && errors.location}
                 />
