@@ -61,7 +61,7 @@ function HomePage() {
                   type="text"
                   name="term"
                   placeholder="Term"
-                  value={values.term || ""}
+                  value={(values||[]).term || ""}
                   onChange={handleChange}
                   isInvalid={touched.term && errors.term}
                 />
